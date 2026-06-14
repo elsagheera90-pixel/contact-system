@@ -1,0 +1,291 @@
+/* Small devices */
+@media (min-width: 576px) {}
+
+/* Medium devices */
+@media (min-width: 768px) {
+
+  /* Start sidebar */
+  .sidebar {
+    display: block;
+  }
+
+  .sidebar img {
+    width: 25px;
+    display: block;
+  }
+
+  .sidebar {
+    width: 70px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 10;
+    overflow-x: hidden;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+
+  .sidebar .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .sidebar .sidebar-logo .logo-img {
+    background-color: var(--main-color);
+    box-shadow: 0 0 2px blue;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .sidebar .sidebar-logo .logo-text a {
+    color: var(--bold-text-color);
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .sidebar .sidebar-logo .logo-text p {
+    margin: 0;
+    color: var(--normal-text-color);
+    font-weight: 600;
+  }
+
+  .sidebar nav .sidebar-links {
+    margin: 30px 0;
+  }
+
+  .sidebar nav .sidebar-links li {
+    margin-bottom: 8px;
+  }
+
+  .sidebar nav .sidebar-links li a {
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: 600;
+    color: var(--normal-text-color);
+    transition: var(--main-transition);
+  }
+
+  .sidebar nav .sidebar-links li a:not(.active):hover {
+    background-color: #F9FAFB;
+    border-radius: 10px;
+  }
+
+  .sidebar nav .sidebar-links li .active {
+    background-color: #EFF6FF;
+    color: #155DFC;
+    border-radius: 10px;
+    border: 1px solid blue;
+  }
+
+  .sidebar .quick-actions h4 {
+    display: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--normal-text-color);
+    margin-bottom: 30px;
+  }
+
+  .sidebar .quick-actions-links li {
+    margin-bottom: 10px;
+  }
+
+  .sidebar .quick-actions-links li a {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 8px 0;
+    transition: var(--main-transition);
+  }
+
+  .sidebar .quick-actions-links a:hover {
+    background-color: #F9FAFB;
+    border-radius: 10px;
+    transform: translateX(3px);
+  }
+
+  .sidebar .quick-actions-links a .action-img {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #eee;
+  }
+
+  .sidebar .quick-actions-links a span {
+    color: #111827;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .sidebar .quick-actions-links .action-img.blue {
+    background-color: #DBE8FC;
+  }
+
+  .sidebar .quick-actions-links .action-img.green {
+    background-color: #D4F3E1;
+  }
+
+  .sidebar .quick-actions-links .action-img.purple {
+    background-color: #EEDFFC;
+  }
+
+  .sidebar .quick-actions-links .action-img.orange {
+    background-color: #FBE4D4;
+  }
+
+  /* Start sidebar */
+  /* Start main-content */
+  main {
+    margin-right: 70px;
+  }
+
+  /* Start header */
+  main header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  main header .statue {
+    flex-direction: row;
+    order: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main header .logo .logo-text h1 {
+    font-size: 45px;
+  }
+
+  main header .statue .statue-icon {
+    text-align: right;
+  }
+
+  main header .statue .right-icons .icon {
+    bottom: 0;
+  }
+
+  main header .special .special-text {
+    display: block;
+  }
+
+  main header .special span {
+    font-size: 18px;
+  }
+
+  main header .special p {
+    margin: 0;
+    color: var(--normal-text-color);
+  }
+
+  /* End header */
+  /* Start cards */
+  main .main-content .cards {
+    flex-direction: row;
+  }
+
+  main .main-content .cards .card .total {
+    font-size: 30px;
+  }
+
+  /* End cards */
+  /* Start grid sections */
+  main .main-content-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "activities income-expenses"
+      "transactions transactions"
+      "bills account-summry"
+      "over-view payment-methods";
+  }
+
+  .over-view .card {
+    margin-top: 20px;
+    ;
+  }
+
+  /* End grid sections */
+  /* End main-content */
+}
+
+/* Large devices */
+@media (min-width: 992px) {}
+
+/* Extra large devices */
+@media (min-width: 1200px) {
+
+  /* Start sidebar */
+  .sidebar {
+    width: 250px;
+  }
+
+  .sidebar nav .sidebar-links li a {
+    gap: 12px;
+  }
+
+  .sidebar .quick-actions-links li a {
+    padding: 8px;
+  }
+
+  .sidebar .quick-actions h4 {
+    display: block;
+  }
+
+  /* End sidebar */
+  main {
+    margin-right: 250px;
+  }
+
+  /* Start main content section */
+  main .main-content-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "activities transactions transactions"
+      "activities transactions transactions"
+      "activities transactions transactions"
+      "activities transactions transactions"
+      "activities transactions transactions"
+      "bills transactions transactions"
+      "bills transactions transactions"
+      "bills transactions transactions"
+      "bills transactions transactions"
+      "bills transactions transactions"
+      "bills transactions transactions"
+      "over-view  income-expenses payment-methods "
+      "over-view  income-expenses payment-methods "
+      "over-view  income-expenses payment-methods "
+      "over-view  income-expenses payment-methods "
+      "over-view  account-summry  payment-methods"
+      "over-view  account-summry  payment-methods"
+      "over-view  account-summry  payment-methods"
+      "over-view  account-summry  payment-methods"
+      "over-view  account-summry  payment-methods"
+      "over-view  account-summry  payment-methods"
+      "over-view . . ";
+  }
+
+  /* End main content section */
+}
+
+/* Extra extra large devices */
+@media (min-width: 1400px) {}
